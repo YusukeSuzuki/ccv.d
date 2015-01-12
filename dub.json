@@ -1,0 +1,36 @@
+{
+	"name": "ccv.d",
+	"description": "libccv dlang binding.",
+	"copyright": "Copyright © 2015, yusuke",
+	"license" : "MIT",
+	"authors": ["Yusuke Suzuki"],
+
+	"dependencies": {
+	},
+
+	"libs" : ["ccv"],
+
+	"configurations" : [
+		{
+			"name" : "debug",
+			"buildType" : "debug",
+			"targetType" : "library",
+			"sourcePaths" : ["source"],
+		},
+		{
+			"name" : "release",
+			"buildType" : "release",
+			"targetType" : "library",
+			"sourcePaths" : ["source"],
+		},
+		{
+			"name" : "test",
+			"targetType" : "executable",
+			"buildType" : "debug",
+			"sourcePaths" : ["source", "test"],
+			"importPaths" : ["source"],
+		},
+	],
+
+	"targetPath" : "target"
+}
